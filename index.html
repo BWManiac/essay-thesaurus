@@ -15,16 +15,22 @@
       }
     </script>
       
-      <script>
-      require_once '/path/to/unirest-php/src/Unirest.php';
-
-      </script>
       
       <?php
-    require_once 'C:\Users\jacob\Desktop\ayla hao\unirest-php-master\src\Unirest.php';
+    require_once __DIR__.'\unirest-php-master\src\Unirest.php'; ?>
+      
+      <?php
+$response = Unirest\Request::get("https://wordsapiv1.p.mashape.com/words/bump/synonyms",
+  array(
+    "X-Mashape-Key" => "CfSurpbqcxmshJ8ZLXCoLltVrG61p1GJ3mRjsnf26VXKD70R9b",
+    "Accept" => "application/json"
+  )
+);
 
+$json_a = json_decode($response,true);
 
  ?>
+ 
       
   </body>
 </html>
