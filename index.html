@@ -4,7 +4,7 @@
   </head>
   <body>
     <textarea id = 'input'>lol</textarea>
-    <button onclick='copy()'>
+    <button onclick='copy()' id = 'sadlads'>
       Copy
     </button>
     <p id='output'>lol</p>
@@ -16,32 +16,20 @@
     </script>
       
       
-      <?php
-    require_once __DIR__.'\unirest-php-master\src\Unirest.php'; ?>
-      
-      <?php
-$response = Unirest\Request::get("https://wordsapiv1.p.mashape.com/words/bump/synonyms",
-  array(
-    "X-Mashape-Key" => "CfSurpbqcxmshJ8ZLXCoLltVrG61p1GJ3mRjsnf26VXKD70R9b",
-    "Accept" => "application/json"
-  )
-);
-
-$json_a = json_decode($response,true);
-
- ?>
+     <script>
+         $('sadlads').click(function()) {
+        $.ajax({
+         url: "https://wordsapiv1.p.mashape.com/words/lovely/synonyms",
+         data: { signature: authHeader },
+         type: "GET",
+         beforeSend: function(xhr){xhr.setRequestHeader('X-Mashape-Key', 'hwEjITIL7hmshgDnFjFZtOr6q5yDp14iLuTjsn7s1O3LdbMi86')},
+         success: function() { alert('Success!' + authHeader); }
+      });
+         
+         $('output').text = "asdf";
+         }
+      </script>
  
       
   </body>
 </html>
-
-
-<!-- These code snippets use an open-source library. http://unirest.io/php
-$response = Unirest\Request::get("https://wordsapiv1.p.mashape.com/words/bump/also",
-  array(
-    "X-Mashape-Key" => "CfSurpbqcxmshJ8ZLXCoLltVrG61p1GJ3mRjsnf26VXKD70R9b",
-    "Accept" => "application/json"
-  )
-);
-
---!>
