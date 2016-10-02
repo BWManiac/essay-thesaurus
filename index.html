@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <textarea id = 'input'>lol</textarea>
+    <button onclick='copy()'>
+      Copy
+    </button>
+    <p id='output'>lol</p>
+    <script>
+      function copy() {
+        document.getElementById('output').innerHTML = 
+          document.getElementById('input').value;
+      }
+    </script>
+      
+      <script>
+      require_once '/path/to/unirest-php/src/Unirest.php';
+
+      </script>
+      
+      <?php
+    require_once 'C:\Users\jacob\Desktop\ayla hao\unirest-php-master\src\Unirest.php';
+
+
+ ?>
+      
+  </body>
+</html>
+
+
+<!-- These code snippets use an open-source library. http://unirest.io/php
+$response = Unirest\Request::get("https://wordsapiv1.p.mashape.com/words/bump/also",
+  array(
+    "X-Mashape-Key" => "CfSurpbqcxmshJ8ZLXCoLltVrG61p1GJ3mRjsnf26VXKD70R9b",
+    "Accept" => "application/json"
+  )
+);
+
+--!>
